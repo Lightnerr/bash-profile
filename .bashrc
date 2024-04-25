@@ -1,5 +1,14 @@
-export PATH="$HOME/.local/bin:$PATH"
+# Check for Profile Updates
+profileUrl="https://raw.githubusercontent.com/Lightnerr/bash-profile/main/.bashrc"
+# If internet connectivity is available, check for updates
+if ping -q -c 1 -W 1 google.com >/dev/null; then
+    if [ -f ~/.bashrc ]; then
+        curl -s $profileUrl -o ~/.bashrc
+        echo "The profile has been updated."
+    fi
+fi
 
+export PATH="$HOME/.local/bin:$PATH"
 
 # alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
