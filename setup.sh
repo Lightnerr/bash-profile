@@ -31,7 +31,7 @@ sudo apt update
 sudo apt install -y curl git unzip
 
 # Oh My Posh installation
-curl -s https://ohmyposh.dev/install.sh | bash -s
+curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
 
 # Install zoxide
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
